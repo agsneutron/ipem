@@ -20,9 +20,9 @@ $CFG->dbuser    = getenv('MOODLE_DB_USER');
 $CFG->dbpass    = getenv('MOODLE_DB_PASS');
 $CFG->prefix    = getenv('MOODLE_DB_PREFIX');*/
 
-$CFG->dbtype    = 'mariadb';
+$CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = 'localhost';
+$CFG->dbhost    = '127.0.0.1';
 $CFG->dbname    = 'usuipem_db';
 $CFG->dbuser    = 'usuipem_user';
 $CFG->dbpass    = 'P9m$JUSvL{;d+R59';
