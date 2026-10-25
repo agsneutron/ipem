@@ -51,11 +51,11 @@ $CFG->sslproxy = true;
 
 $CFG->directorypermissions = 0777;
 
-@error_reporting(E_ALL);
+/*@error_reporting(E_ALL);
 @ini_set('display_errors', '1');
 
 $CFG->debug = E_ALL;
-$CFG->debugdisplay = true;
+$CFG->debugdisplay = true;*/
 
 //@error_reporting(E_ALL | E_STRICT);
 //@ini_set('display_errors', '1');
