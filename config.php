@@ -4,7 +4,7 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-putenv('MOODLE_DB_TYPE=' . getenv('MOODLE_DB_TYPE'));
+/*putenv('MOODLE_DB_TYPE=' . getenv('MOODLE_DB_TYPE'));
 putenv('MOODLE_DB_LIBRARY=' . getenv('MOODLE_DB_LIBRARY'));
 putenv('MOODLE_DB_HOST=' . getenv('MOODLE_DB_HOST'));
 putenv('MOODLE_DB_NAME=' . getenv('MOODLE_DB_NAME'));
@@ -18,7 +18,17 @@ $CFG->dbhost    = getenv('MOODLE_DB_HOST');
 $CFG->dbname    = getenv('MOODLE_DB_NAME');
 $CFG->dbuser    = getenv('MOODLE_DB_USER');
 $CFG->dbpass    = getenv('MOODLE_DB_PASS');
-$CFG->prefix    = getenv('MOODLE_DB_PREFIX');
+$CFG->prefix    = getenv('MOODLE_DB_PREFIX');*/
+
+$CFG->dbtype    = 'mysqli';
+$CFG->dblibrary = 'native';
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'usuipem_db';
+$CFG->dbuser    = 'usuipem_user';
+$CFG->dbpass    = 'P9m$JUSvL{;d+R59';
+$CFG->prefix    = 'mdl_';
+
+
 $CFG->dboptions = array (
   'dbpersist' => 0,
   'dbport' => 3306,
