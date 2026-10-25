@@ -1,0 +1,105 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template mod_customcert/verify_certificate_result
+
+    The certificate verification result
+
+    Classes required for JS:
+    * None
+
+    Data attibutes required for JS:
+    * All data attributes are required
+
+    Context variables required for this template:
+    * userprofileurl The URL to the user's profile
+    * userfullname The fullname of the user
+    * courseurl The URL of the course
+    * coursefullname The full name of the course
+    * certificatename The name of the certificate
+
+    Example context (json):
+    {
+        "userprofileurl": "http://www.example.com",
+        "userfullname": "Mark Smith",
+        "courseurl": "http://www.example.com",
+        "coursefullname": "Computing 101",
+        "certificatename": "Ability to write 'Hello world' in Java."
+    }
+}}
+
+ <h5>Datos del curso</h5>
+<table class="admintable generaltable mb-2 table table-striped">
+    <tr>
+        <th>{{#str}}fullname{{/str}}:</th>
+        <td><a href="{{{userprofileurl}}}">{{userfullname}}</a></td>
+    </tr>
+    <tr>
+        <th>{{#str}}course{{/str}}:</th>
+        <td><a href="{{{courseurl}}}">{{coursefullname}}</a></td>
+    </tr>
+    <tr>
+        <th>{{#str}}certificate, customcert{{/str}}:</th>
+        <td>{{certificatename}}</td>
+    </tr>
+    {{#expiry}}
+        <tr>
+            <th>{{#str}}expireson, customcertelement_expiry{{/str}}:</th>
+            <td>{{{.}}}</td>
+        </tr>
+    {{/expiry}}
+</table>
+{{#folio_id}}
+<br>
+ <h5>Firma Electrónica</h5>
+  {{/folio_id}}
+<table class="admintable generaltable mb-2 table table-striped">
+    {{#folio_id}}
+        <tr>
+            <th>Folio ID:</th>
+            <td>{{folio_id}}</td>
+        </tr>
+    {{/folio_id}}
+    {{#nombre_firmante}}
+        <tr>
+            <th>Firmante:</th>
+            <td><code style="color: green;">{{nombre_firmante}}</code></td>
+        </tr>
+    {{/nombre_firmante}}
+    {{#firma_fecha}}
+        <tr>
+            <th>Fecha:</th>
+            <td><code style="color: green;">{{firma_fecha}}</code></td>
+        </tr>
+    {{/firma_fecha}}
+    {{#firma_hex}}
+        <tr>
+            <th>Firma HEX:</th>
+            <td>
+            <div class="firma-hex-container">
+                <code class="firma-hex">{{firma_hex}}</code>
+            </div>
+            </td>
+        </tr>
+        <style>
+            .firma-hex-container {
+            word-break: break-all;
+            }
+        </style>
+    </selection>
+    {{/firma_hex}}
+</table>

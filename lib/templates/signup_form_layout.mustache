@@ -1,0 +1,18 @@
+{{!
+    @template core/signup_form_layout
+
+    Example context (json):
+    {
+        "logourl": "https://moodle.org/logo/moodle-logo.svg",
+        "sitename": "Site name",
+        "formhtml": "<p>(Form html would go here)</p>"
+    }
+}}
+<div class="signupform">
+    <h1 class="login-heading">{{#str}} newaccount {{/str}}</h1>
+    {{{formhtml}}}
+   <div class=" mt-4 alert alert-secondary" role="alert">
+    Al iniciar sesión o crear su cuenta usted acepta el aviso de privacidad. <a href='https://semujeres.edomex.gob.mx/sites/semujeres.edomex.gob.mx/files/files/AVISO%20DE%20PRIVACIDAD%20CAD.pdf' target='_blank' >Ver aviso de privacidad</a>
+
+    </div>
+</div>
