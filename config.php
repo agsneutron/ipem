@@ -26,8 +26,8 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8mb4_unicode_ci',
 );
 
-$CFG->wwwroot   = 'https://cadsemujeres.edomex.gob.mx';
-$CFG->dataroot  = '/var/www/moodledata';
+$CFG->wwwroot   = 'https://ipem.fusion-ti.com/ipem';
+$CFG->dataroot  = '/home1/usuipem/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->webservice_url = "http://ceromultas.edomex.gob.mx/ceroPapel/webService?wsdl";
