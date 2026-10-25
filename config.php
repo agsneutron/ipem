@@ -25,7 +25,7 @@ $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
 $CFG->dbname    = 'usuipem_db';
 $CFG->dbuser    = 'usuipem_user';
-$CFG->dbpass    = 'P9m$JUSvL{;d+R59$$$$';
+$CFG->dbpass    = 'P9m$JUSvL{;d+R59';
 $CFG->prefix    = 'mdl_';
 
 
