@@ -57,10 +57,10 @@ $CFG->directorypermissions = 0777;
 //$CFG->debug = E_ALL;
 //$CFG->debugdisplay = true;
 
-//@error_reporting(E_ALL | E_STRICT);
-//@ini_set('display_errors', '1');
-//$CFG->debug = (E_ALL | E_STRICT);
-//$CFG->debugdisplay = 1;
+@error_reporting(E_ALL | E_STRICT);
+@ini_set('display_errors', '1');
+$CFG->debug = (E_ALL | E_STRICT);
+$CFG->debugdisplay = 1;
 
 //$CFG->debug_developer_use_pretty_exceptions = false;
 require_once(__DIR__ . '/lib/setup.php');
